@@ -1,0 +1,24 @@
+﻿<div style="padding-top:30px">
+    <h3>Информация о 10 лучших фильмах</h3>
+    <table class="table">
+        <tr>
+            <td><p>Название филма</p></td>
+            <td><p>Режисёр</p></td>
+            <td><p>Жанр</p></td>
+            <td><p>Год выпуска</p></td>
+            <td><p>Краткое описание</p></td>
+            <td><p>Фото</p></td>            
+        </tr>
+        @foreach (var movie in ViewBag.Movies)
+        {
+            <tr>
+                <td><p>@movie.Title</p></td>
+                <td><p>@movie.Director</p></td>
+                <td><p>@movie.Genre</p></td>
+                <td><p>@movie.ReleaseYear</p></td>
+                <td><p>@movie.Description</p></td>
+                <td><img src="@movie.PosterPath" alt="Movie Poster" width="250" /></td>
+            </tr>
+        }
+    </table>
+</div>

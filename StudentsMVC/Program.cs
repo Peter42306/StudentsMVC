@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using StudentsMVC;
+using StudentsMVC.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,7 @@ string? connection = builder.Configuration.GetConnectionString("DefaultConnectio
 
 // добавл€ем контекст ApplicationContext в качестве сервиса в приложение
 builder.Services.AddDbContext<StudentContext>(options => options.UseSqlServer(connection));
+builder.Services.AddDbContext<MovieContext>(options=>options.UseSqlServer(connection));
 
 // ƒобавл€ем сервисы MVC
 builder.Services.AddControllersWithViews();
@@ -18,6 +20,6 @@ app.UseStaticFiles(); // обрабатывает запросы к файлам в папке wwwroot
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Student}/{action=Index}/{id?}");
+    pattern: "{controller=Movie}/{action=Index}/{id?}");
 
 app.Run();
