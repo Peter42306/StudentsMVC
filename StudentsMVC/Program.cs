@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 string? connection = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // добавляем контекст ApplicationContext в качестве сервиса в приложение
-builder.Services.AddDbContext<StudentContext>(options => options.UseSqlServer(connection));
+//builder.Services.AddDbContext<StudentContext>(options => options.UseSqlServer(connection));
 builder.Services.AddDbContext<MovieContext>(options=>options.UseSqlServer(connection));
 
 // Добавляем сервисы MVC
