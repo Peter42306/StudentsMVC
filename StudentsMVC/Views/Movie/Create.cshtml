@@ -18,7 +18,7 @@
 					<span asp-validation-for="Title" class="text-danger"></span>
 				</div>
 				<div class="form-group">
-					<label asp-for="Director" class="control-label">Режисёр</label>
+					<label asp-for="Director" class="control-label">Режиссёр</label>
 					<input asp-for="Director" class="form-control" />
 					<span asp-validation-for="Director" class="text-danger"></span>
 				</div>
@@ -28,7 +28,7 @@
 					<span asp-validation-for="Genre" class="text-danger"></span>
 				</div>
 				<div class="form-group">
-					<label asp-for="ReleaseYear" class="control-label">Год выходы</label>
+					<label asp-for="ReleaseYear" class="control-label">Год выхода</label>
 					<input asp-for="ReleaseYear" class="form-control" />
 					<span asp-validation-for="ReleaseYear" class="text-danger"></span>
 				</div>
@@ -46,11 +46,12 @@
 
 				<div class="form-group">
 					<label asp-for="PosterPath" class="control-label">Постер</label>
-					<input asp-for="PosterPath" type="file" class="form-control" />
+					<input asp-for="PosterPath" type="file" name="uploadedFile" class="form-control" />
 					<span asp-validation-for="PosterPath" class="text-danger"></span>
 				</div>
-				<div class="form-group">
-					<button type="submit" class="btn btn-danger" style="margin-top:20px">Добавить фильм</button>
+				<div class="form-group">					
+					<input type="submit" value="Сохранить" class="btn btn-danger" style="margin-top:20px" />
+					@* <button type="submit" class="btn btn-danger" style="margin-top:20px">Добавить фильм</button> *@
 				</div>
 				
 				
